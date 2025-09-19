@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR=\home\ec2-user\logs
+SOURCE_DIR=/home/ec2-user/logs
 
 R="\e[31m" # color red
 G="\e[32m" # color green
