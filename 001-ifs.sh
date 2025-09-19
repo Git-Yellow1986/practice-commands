@@ -52,7 +52,7 @@ fi
 
 # FILES=$(find /home/ec2-user/logs -name "*.log" -mtime +4)
 
-FILES=$(find ${SOURCE_DIR} -name "*.*" -mtime +4)
+FILES=$(find ${SOURCE_DIR} -name "*.*" -mtime +1)
 echo "Files: $FILES"
 
 while IFS= read -r line
