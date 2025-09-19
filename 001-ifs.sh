@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # text="Banana Apple Orange"
 # ne
@@ -30,6 +30,7 @@
 # done
 # IFS=$OLDIFS
 
+#!/bin/bash
 
 SOURCE_DIR=\home\ec2-user\logs
 
@@ -47,17 +48,29 @@ else
     exit 1
 fi
 
-# Actual path 'find /home/ec2-user/logs -name "*.log" -mtime +4
+# # Actual path 'find /home/ec2-user/logs -name "*.log" -mtime +4
 
-# FILES=$(find /home/ec2-user/logs -name "*.log" -mtime +4)
+# # FILES=$(find /home/ec2-user/logs -name "*.log" -mtime +4)
+
+# FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +4)
+# echo "Files: $FILES"
+
+# while IFS= read -r file
+# do
+#      echo "Deleting file: $file"
+# done <<< $FILES
+
+
 
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +4)
+echo "Files: $FILES"
 
-    echo "Files: $FILES"
-
-while IFS= read -r file
+# dont use line, it is reserverd word
+while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore while space.-r is for not to ingore special charecters like /
 do
-     echo "Deleting Line: $file"
+    echo "Deleting file: $file"
+    #rm -rf $file
 done <<< $FILES
+
 
 
