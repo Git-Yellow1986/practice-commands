@@ -15,7 +15,6 @@ fi
 while IFS= read -r file
 do
     echo "Deleting files : $file"
-    #rm -rf $file
-    ls $file
-
+    rm -rf $file
+    
 done <<< $FILES
