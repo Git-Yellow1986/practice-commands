@@ -9,7 +9,7 @@ else
     echo "$SOURCE_DIR does not Exit....."
     exit 1
 fi
-    FILES=$(FIND $SOURCE_DIR -name "*.log" -mtime +14)
+    FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
         echo "Files: $FILES"
 
 while IFS= read -r file
