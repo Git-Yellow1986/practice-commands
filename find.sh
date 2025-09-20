@@ -10,9 +10,12 @@ else
     exit 1
 fi
 FILES=$(FIND $SOURCE_DIR -name "*.log" -mtime +14)
+echo "Files: $FILES"
+
 while IFS= read -r file
 do
     echo "Deleting files : $file"
     #rm -rf $file
+    ll $file
 
 done <<< $FILES
