@@ -9,3 +9,11 @@ else
     echo "The source directory does not exit..."
     exit 1
 fi
+
+if [ ! -n $SOURCE_DIR ]
+then
+    echo "Files does not found..."
+else
+    echo "Files are exist..."
+fi
+
