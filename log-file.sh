@@ -34,7 +34,7 @@ then
 fi
 
 
-dnf install nginx -z &>>$LOG_FILE
+dnf install nginxx -y &>>$LOG_FILE
 
 if [ $1 -ne 0 ]
 then 
