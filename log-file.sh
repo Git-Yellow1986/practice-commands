@@ -7,4 +7,5 @@ touch "$FILE_NAME"
 mkdir -p $LOG_FOLDER
 
 echo "this is Matthews" &>>$LOG_FILE
+echo "This is Lishanth from USA.." &>>$LOG_FILE
 
