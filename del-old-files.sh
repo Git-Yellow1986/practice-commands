@@ -24,10 +24,10 @@ do
     echo "deleting files $file"
     rm -rf $file
 
-    if [ ! -z $file ]
+    if [ ! -z $FILE ]
     then
-        echo "$file deleted"
+        echo "$file are not deleted"
     else
-        echo "files are not deleted"
+        echo "$files are existed"
     fi
 done <<<$FILE
