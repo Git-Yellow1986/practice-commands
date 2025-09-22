@@ -1,8 +1,8 @@
 #!/bin/bash
-LOG_FOLDER="/var/log/shell-script"
+LOG_FOLDER="/var/log/shell-script/"
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
-FILE_NAME="$LOG_FOLDER/log"
-touch "$FILE_NAME"
+FILE_NAME=$(touch log)
+#touch "$FILE_NAME"
 LOG_FILE="$LOG_FOLDER/$FILE_NAME-$TIME_STAMP.log"
 mkdir -p $LOG_FOLDER
 
