@@ -34,15 +34,6 @@ then
 fi
 
 dnf list installed nginx
-if [ $? -ne 0 ]
-then
-    echo "Nginx not installed"
-    exit 1
-else
-    echo "Nginx start installing..."
-fi
-
-    dnf install nginx -y
 
 if [ $1 -ne 0 ]
 then 
@@ -51,3 +42,6 @@ then
 else 
     echo -e "$2 Nginx insall.. $Y SUCCESSFULLY $N"
 fi
+
+dnf install nginx -y
+
