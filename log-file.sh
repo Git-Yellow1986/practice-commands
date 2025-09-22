@@ -25,9 +25,9 @@ dnf install nginx -y &>>$LOG_FILE
 
 if [ $1 -ne 0 ]
 then 
-    echo -e "$? is ... $R FAILURE $N"
+    echo -e "$2 is ... $R FAILURE $N"
     exit 1
 else 
-    echo -e "$? is...$Y SUCCESS $N"
+    echo -e "$2 is...$Y SUCCESS $N"
 fi
 
