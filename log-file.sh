@@ -34,8 +34,15 @@ then
 fi
 
 dnf list installed nginx
+if [ $? -ne 0 ]
+then
+    echo "Nginx not installed"
+    exit 1
+else
+    echo "Nginx start installing..."
+fi
 
-dnf install nginxx -y &>>$LOG_FILE
+dnf install nginxx -y 
 
 if [ $1 -ne 0 ]
 then 
