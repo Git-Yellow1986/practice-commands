@@ -15,11 +15,6 @@ Y="\e[32"
 
 echo "Script started executing at: $(date)"
 
-if [ $USERID -ne 0 ]
-then 
-    echo -e "$Y Please run this script with root privelages $N " 
-    exit -1
-fi
 
 VALIDATE(){
 if [ $1 -ne 0 ]
@@ -30,6 +25,13 @@ else
     echo -e "$2 is...$Y SUCCESS $N"
 fi
 }
+
+if [ $USERID -ne 0 ]
+then 
+    echo -e "$Y Please run this script with root privelages $N " 
+    exit -1
+fi
+
 
 dnf install nginx -y &>>$LOG_FILE
 
