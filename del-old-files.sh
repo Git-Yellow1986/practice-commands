@@ -19,7 +19,7 @@ else
     echo "The files are exist"
 fi
 
-while IFS= read file
+while IFS= read -r file
 do
     echo "deleting files $file"
 done <<<$FILE
