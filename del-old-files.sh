@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SOURCE_DIR="/var/log/shell-script"
-FILE="/var/log/shell-script"
+FILE=$(find $SOURCE_DIR -name "*.log" -mtime -1)
 
 if [ ! -d $SOURCE_DIR ]
 then
