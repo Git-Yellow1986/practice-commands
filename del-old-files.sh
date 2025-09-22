@@ -22,4 +22,5 @@ fi
 while IFS= read -r file
 do
     echo "deleting files $file"
+    rm -rf $file
 done <<<$FILE
