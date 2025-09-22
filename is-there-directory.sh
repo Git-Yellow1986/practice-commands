@@ -13,6 +13,7 @@ fi
 if [ ! -n $SOURCE_DIR ]
 then
     echo "Files does not found..."
+    exit 1
 else
     echo "Files are exist..."
 fi
