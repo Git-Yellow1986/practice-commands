@@ -7,10 +7,13 @@ touch $FILE_NAME
 mkdir -p $LOG_FOLDER
 
 USERID=$(id -u)
+
 if [ $USERID -ne 0 ]
 then 
-    echo "Please run this script root privelage $1" &>>$LOG_FILE
+    echo "Please run this script with root privelages " &>>$LOG_FILE
     exit -1
 fi
+
+dnf install nginx -y &>>$LOG_FILE
 
 
