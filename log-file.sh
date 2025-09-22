@@ -38,7 +38,7 @@ dnf install nginxx -y &>>$LOG_FILE
 
 if [ $1 -ne 0 ]
 then 
-    echo -e "$2 Nginx install... $R FAILURE $N"
+    echo -e "$1 Nginx install... $R FAILURE $N"
     exit 1
 else 
     echo -e "$2 Nginx insall.. $Y SUCCESSFULLY $N"
