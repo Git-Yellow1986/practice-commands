@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SOURCE_DIR="/var/log/shell-script"
-FILE=$(find $SOURCE_DIR -name "*.log" -mtime -1)
+FILE=$(find $SOURCE_DIR -name "*.log" -mtime -14)
 
 if [ ! -d $SOURCE_DIR ]
 then
@@ -28,6 +28,6 @@ do
     then
         echo "files are existed "
     else
-        echo " files are not existed"
+        echo "files are not existed"
     fi
 done <<<$FILE
