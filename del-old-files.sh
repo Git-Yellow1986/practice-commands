@@ -26,8 +26,8 @@ do
 
     if [ ! -z $FILE ]
     then
-        echo "$file are not deleted"
+        echo "files are not deleted"
     else
-        echo "$files are existed"
+        echo " files are existed"
     fi
 done <<<$FILE
