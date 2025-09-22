@@ -22,7 +22,7 @@ then
     echo -e "$1 is ... $R FAILURE $N"
     exit 1
 else 
-    echo -e "$2 is...$Y SUCCESS $N"
+    echo -e "$2 is... $G SUCCESS $N"
 fi
 }
 
