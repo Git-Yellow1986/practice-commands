@@ -21,5 +21,5 @@ fi
 
 while IFS= read file
 do
-    echo "deleting files"
+    echo "deleting files $file"
 done <<<$FILE
