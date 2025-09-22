@@ -16,4 +16,11 @@ fi
 
 dnf install nginx -y &>>$LOG_FILE
 
+if [ $1 -ne 0 ]
+then 
+    echo "$2 install is FAILURE"
+    exit 1
+else 
+    echo "$2 install is SUCCESS"
+fi
 
