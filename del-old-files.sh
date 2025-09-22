@@ -19,6 +19,6 @@ else
     echo "The files are exist"
 fi
 
-while IFS= read file
-do
-    echo "de
+# while IFS= read file
+# do
+#     echo "de
