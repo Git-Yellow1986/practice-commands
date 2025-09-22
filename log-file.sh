@@ -10,7 +10,7 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then 
-    echo "Please run this script with root privelages " &>>$LOG_FILE
+    echo "Please run this script with root privelages " | tee -a $LOG_FILE
     exit -1
 fi
 
