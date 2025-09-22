@@ -40,9 +40,10 @@ then
     exit 1
 else
     echo "Nginx start installing..."
+    dnf install nginxx -y 
+
 fi
 
-dnf install nginxx -y 
 
 if [ $1 -ne 0 ]
 then 
