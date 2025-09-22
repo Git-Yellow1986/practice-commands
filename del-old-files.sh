@@ -23,4 +23,11 @@ while IFS= read -r file
 do
     echo "deleting files $file"
     rm -rf $file
+
+    if [ ! -z $file ]
+    then
+        echo "$file deleted"
+    else
+        echo "files are not deleted"
+    fi
 done <<<$FILE
