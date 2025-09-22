@@ -1,8 +1,9 @@
 #!/bin/bash
 LOG_FOLDER="/var/log/shell-script/"
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
-FILE_NAME=$(echo matthews.log | cut "." -f1)
+FILE_NAME="Matthews"
 LOG_FILE="$LOG_FOLDER/$FILE_NAME-$TIME_STAMP.log"
+touch "$FILE_NAME"
 mkdir -p $LOG_FOLDER
 
 echo "this is Matthews" &>>$LOG_FILE
