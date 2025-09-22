@@ -7,10 +7,10 @@ sudo touch $FILE_NAME
 mkdir -p $LOG_FOLDER
 
 USERID=$(id -u)
-N='\e[0m'
-R='\e[30m'
-G='\e[31'
-Y='\e[32'
+N="\e[0m"
+R="\e[30m"
+G="\e[31"
+Y="\e[32"
 
 
 if [ $USERID -ne 0 ]
