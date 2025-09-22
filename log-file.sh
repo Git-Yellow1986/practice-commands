@@ -10,8 +10,8 @@ USERID=$(id -u)
 
 N="\e[0m"
 R="\e[30m"
-G="\e[31"
-Y="\e[32"
+G="\e[31m"
+Y="\e[32m"
 
 echo "Script started executing at: $(date)"
 
