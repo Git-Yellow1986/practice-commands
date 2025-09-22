@@ -6,6 +6,11 @@ LOG_FILE="$LOG_FOLDER/$FILE_NAME-$TIME_STAMP.log"
 touch $FILE_NAME
 mkdir -p $LOG_FOLDER
 
-echo "this is Matthews" &>>$LOG_FILE
-echo "This is Lishanth from USA.." &>>$LOG_FILE
+USERID=$(id -u)
+if [ $USERID -ne 0 ]
+then 
+    echo "Please run this script root privelage" &>>$LOG_FILE
+    exit -1
+fi
+
 
