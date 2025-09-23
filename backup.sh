@@ -24,7 +24,7 @@ else
     
 fi
 
-if [ ! -d $DEST-DIR ]
+if [ ! -d $DEST_DIR ]
 then
     echo -e "$DEST_DIR $R DOES NOT EXISTED $N"
     exit 1
