@@ -41,7 +41,7 @@ fi
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
     echo "Files: $FILE"
 
-if [ -f $FILE ]
+if [ -z $FILE ]
 then    
     echo "Files are Found"
     ZIP_FILE="$DEST_DIR-$TIMESTAMP.zip"
