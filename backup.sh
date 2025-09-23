@@ -14,12 +14,13 @@ USAGE(){
 }
     # Check Source and Destination are provided
 
-if [ -d SOURCE_DIR ]
+if [ ! -d $SOURCE_DIR ]
 then 
-    echo -e "$SOURCE_DIR is $G EXISTED $N"
-else
-    echo -e "$SOURCE_DIR does $R NOT EXISTED $N"
+    echo -e "$SOURCE_DIR $R DEOS NOT EXISTED $N"
     exit 1
+else
+    echo -e "$SOURCE_DIR is $G EXISTED $N"
+    
 fi
 
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
