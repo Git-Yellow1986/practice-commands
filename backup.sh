@@ -38,15 +38,15 @@ else
     echo -e "$DEST_DIR is $G EXISTED $N"
 fi
 
-FILES=$(find $SOURCE_DIR/app-logs -name "*.log" -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
     echo "Files: $FILE"
 
 if [ ! -z $FILES ]
 then    
     echo "Files are Found"
 
-    # ZIP_FILE="$DEST_DIR-$TIMESTAMP.zip"
-    # find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
+    ZIP_FILE="$DEST_DIR-$TIMESTAMP.zip"
+    find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
     
 fi
 
