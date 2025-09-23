@@ -16,9 +16,9 @@ USAGE(){
 
 if [ -d SOURCE_DIR ]
 then 
-    echo "$SOURCE_DIR is $G EXISTED $N"
+    echo -e "$SOURCE_DIR is $G EXISTED $N"
 else
-    echo "$SOURCE_DIR does $R NOT EXISTED $N"
+    echo -e "$SOURCE_DIR does $R NOT EXISTED $N"
     exit 1
 fi
 
