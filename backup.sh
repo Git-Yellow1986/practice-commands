@@ -4,7 +4,7 @@ SOURCE_DIR=${1}
 DEST_DIR=${2}
 DAYS=${3:-14}
 
-TIMESTAMP=$(date "+%F %r")
+#TIMESTAMP=$(date "+%F %r")
 
 N="\e[0m"
 R="\e[31m"
