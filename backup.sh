@@ -4,6 +4,8 @@ SOURCE_DIR=${1}
 DEST_DIR=${2}
 DAYS=${3:-14}
 
+TIMESTAMP=$(date "+%F %r")
+
 N="\e[0m"
 R="\e[31m"
 G="\e[32m"
@@ -14,6 +16,7 @@ USAGE(){
 }
     # Check Source and Destination are provided
     USAGE
+    exit 1
 
 if [ ! -d $SOURCE_DIR ]
 then 
@@ -34,5 +37,8 @@ fi
 
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
     echo "Files: $FILE"
+
+echo "Time:: $TIMESTAMP"
+
     
 
