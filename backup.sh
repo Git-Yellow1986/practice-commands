@@ -15,7 +15,11 @@ USAGE(){
     echo -e "$R USAGE:: $N backup.sh <Source> <Destination> <Days(optional)>"
 }
     # Check Source and Destination are provided
-    USAGE
+if [ $# -lt 2 ] 
+then 
+       USAGE
+       exit 1
+fi
 
 if [ ! -d $SOURCE_DIR ]
 then 
