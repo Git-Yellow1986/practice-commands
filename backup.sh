@@ -25,6 +25,5 @@ fi
 
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
     echo "Files: $FILE"
-    ls -l $FILE
     
 
