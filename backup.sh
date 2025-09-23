@@ -24,6 +24,14 @@ else
     
 fi
 
+if [ ! -d $DEST-DIR ]
+then
+    echo -e "$DEST_DIR $R DOES NOT EXISTED $N"
+    exit 1
+else
+    echo -e "$DEST_DIR is $G EXISTED $N"
+fi
+
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
     echo "Files: $FILE"
     
