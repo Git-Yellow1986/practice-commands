@@ -38,7 +38,7 @@ fi
 FILE=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
     echo "Files: $FILE"
 
-echo "Time:: $TIMESTAMP"
+#echo "Time:: $TIMESTAMP"
 
     
 
