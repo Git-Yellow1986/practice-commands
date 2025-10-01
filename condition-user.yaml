@@ -12,5 +12,6 @@
         msg: "user info: {{ user_check }}"
       
     - name : create user
-      ansible.builtin.command: id expense
+      ansible.builtin.command: adduser expense
+         
       when: user_check.rc != 0
