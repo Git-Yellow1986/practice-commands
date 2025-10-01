@@ -21,8 +21,8 @@
       vpc_subnet_id: "{{subnet_id}}"  
     loop: "{{ instances }}"
     
-    register: ec2.instances
+    register: ec2_instances
 
   - name: Display instance information
     ansible.builtin.debug:
-      msg: "Launched instance ID is {{ ec2.instances[0].id }} with public IP {{ ec2.instances[0].public_ip_address }}"
+      msg: "Launched instance ID is {{ ec2_instances[0].id }} with public IP {{ ec2_instances[0].public_ip_address }}"
