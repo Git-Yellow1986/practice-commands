@@ -13,5 +13,5 @@
       
     - name : create user
       ansible.builtin.command: adduser expense
-         
+        
       when: user_check.rc != 0

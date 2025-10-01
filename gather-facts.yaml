@@ -1,0 +1,7 @@
+- name: Gathering information
+  hosts: web
+  gather_facts: yes
+  tasks:
+    - name: Display OS information
+      ansible.builtin.debug:
+        msg: "The operating system is {{ ansible_facts['os_family'] }} and version is {{ ansible_facts['distribution_version'] }}"
