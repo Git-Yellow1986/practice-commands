@@ -2,6 +2,7 @@
   hosts: web
   become: yes
   tasks:
+   
     - name: Install and remove packages
       ansible.builtin.packages:
         name: {{ item.name }}
@@ -10,7 +11,9 @@
         - { name: "nginx", state: "present" }
         - { name: "httpd", state: "absent" }  
         - { name: "mysql", state: "present" }   
-  #     notify: 
+
+
+  #  notify: 
   #       - Start Nginx
   # handlers:
   #   - name: Start Nginx
