@@ -6,9 +6,11 @@
       ansible.builtin.command: id expense 
       register: user_check
       ignore_errors: true
-      
+
     - name: check the user 
       ansible.builtin.debug:
         msg: "user info: {{ user_check }}"
       
-    
+    - name : create user
+      ansible.builtin.command: id expense
+      when: user_check.rc != 0
