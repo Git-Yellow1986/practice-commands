@@ -1,0 +1,14 @@
+- name: loop names
+  hosts: local
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Loop through names
+      ansible.builtin.debug:
+        msg: "Hello, {{ item }}!"
+      loop:
+        - Alice
+        - Bob
+        - Charlie
+        - Diana
+        - Eve
