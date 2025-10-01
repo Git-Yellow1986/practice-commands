@@ -25,4 +25,4 @@
 
   - name: Display instance information
     ansible.builtin.debug:
-      msg: "Launched instance ID is {{ ec2.instances[0].id }}, with public IP {{ ec2.instances[0].public_ip_address }}"
+      msg: "Launched instance ID is {{ ec2 }}, with public IP {{ ec2 }}"
