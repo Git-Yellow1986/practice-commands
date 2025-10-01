@@ -2,9 +2,9 @@
   hosts: web
   become: yes
   tasks:
-    # - name: check user exists or onot
-    #   ansible.builtin.command: id expense
-    #   register: user_check
+    - name: check user exists or onot
+      ansible.builtin.command: id expense
+      register: user_check
 
     # - name: check the user 
     #   ansible.builtin.debug:
