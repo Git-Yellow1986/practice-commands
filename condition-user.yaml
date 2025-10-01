@@ -2,18 +2,20 @@
   hosts: web
   become: yes
   tasks:
-    # - name: check user exists or onot
-    #   ansible.builtin.user: 
+    - name: check user exists or onot
+      ansible.builtin.command: id expense 
+      register: user_check
       
 
-    # - name: check the user 
-    #   ansible.builtin.debug:
-    #     msg: "user info: {{ user_check }}"
+
+    - name: check the user 
+      ansible.builtin.debug:
+        msg: "user info: {{ user_check }}"
       
-    - name: create user
-      ansible.builtin.user:
-      register: user_check
-        name: expense
-        state: present
-        shell: /bin/bash
-      when: user_check.rc != 0
+    # - name: create user
+    #   ansible.builtin.user:
+      
+    #     name: expense
+    #     state: present
+    #     shell: /bin/bash
+    #   when: user_check.rc != 0
