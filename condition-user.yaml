@@ -5,17 +5,10 @@
     - name: check user exists or onot
       ansible.builtin.command: id expense 
       register: user_check
+      ignore_errors: true
       
-
-
     - name: check the user 
       ansible.builtin.debug:
         msg: "user info: {{ user_check }}"
       
-    # - name: create user
-    #   ansible.builtin.user:
-      
-    #     name: expense
-    #     state: present
-    #     shell: /bin/bash
-    #   when: user_check.rc != 0
+    
