@@ -1,7 +1,6 @@
 - name: create instances
   hosts: local
   connection: local
-  gather_facts: no
   
   vars:
     subnet_id: "subnet-0bc41aa50c0fccefc"
@@ -13,18 +12,18 @@
     - frontend
 
   tasks:
-    - name: Launch EC2 Instances
-      amazon.aws.ec2_instance:
-        name: "{{ item }}"
-        instance_type: "t2.micro"
-        image_id: "{{ami_id}}" 
-        security_group: "{{security_group}}"  
-        region: "us-east-1"
-        vpc_subnet_id: "{{subnet_id}}"  
-        loop: "{{ instances }}"
-      
-      register: ec2
+  - name: Launch EC2 Instances
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      instance_type: "t2.micro"
+      image_id: "{{ami_id}}" 
+      security_group: "{{security_group}}"  
+      region: "us-east-1"
+      vpc_subnet_id: "{{subnet_id}}"  
+    loop: "{{ instances }}"
+    
+    register: ec2
 
-    - name: Display instance information
-      ansible.builtin.debug:
-        msg: "Launched instance ID is {{ ec2.instances[0].id }} with public IP {{ ec2.instances[0].public_ip_address }}"
+  - name: Display instance information
+    ansible.builtin.debug:
+      msg: "Launched instance ID is {{ ec2.instances[0].id }} with public IP {{ ec2.instances[0].public_ip_address }}"
