@@ -10,4 +10,4 @@
   - name: check the number less than 0
     ansible.builtin.debug:
       msg: "Age cannot be less than 0"
-    when: NUMBER < 0
+    when: NUMBER | int < 0
