@@ -10,7 +10,7 @@
   - name: check the number less than 0
     ansible.builtin.debug:
       msg: "the {{NUMBER}} is less than 0"
-    when:  NUMBER | int < 0
+    when:  NUMBER | int <= 0
 
   - name: check the number less than 0
     ansible.builtin.debug:
