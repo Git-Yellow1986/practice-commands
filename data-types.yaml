@@ -9,11 +9,11 @@
       - python
       - ansible
       - aws 
-  live: true
-  tools: 
-    python: 3.9
-    ansible: 2.14
-    awscli: 2.7 
+    live: true
+    tools: 
+      python: 3.9
+      ansible: 2.14
+      awscli: 2.7 
   tasks:
   - name: print string
     ansible.builtin.debug:
