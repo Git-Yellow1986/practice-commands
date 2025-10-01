@@ -1,9 +1,10 @@
+
 - name: all data types
   hosts: local
   connection: local
   vars:
-    NAME: "Matthews"
-    PLACE: "Hyderabd"
+    NAME: Matthews
+    PLACE: Hyderabd
     AGE:  30
   topics:
       - python
