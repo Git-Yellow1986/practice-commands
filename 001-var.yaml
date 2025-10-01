@@ -1,0 +1,15 @@
+- name: This is trail 
+  hosts: web
+  vars_prompt:
+  - name: name
+    prompt: "Enter you name:"
+  - name: place
+    prompt: "Enter your place"
+  tasks:
+
+  - name: Display msg
+    ansible.builtin.debgu:
+      msg: "Your name is:{{name}}, your place is:{{place}}"
+
+  
+  
