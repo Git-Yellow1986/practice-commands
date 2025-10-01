@@ -1,6 +1,7 @@
 - name: gather gather_facts
   hosts: web
   gather_facts: yes
+  become: yes
   tasks:
     - name: Display OS information
       ansible.builtin.debug:
