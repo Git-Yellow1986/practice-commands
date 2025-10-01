@@ -1,0 +1,22 @@
+- name: all data types
+  hosts: local
+  connection: local
+  vars:
+    NAME = "Matthews"
+    PLACE = "Hyderabd"
+    AGE = 30
+    topics:
+      - python
+      - ansible
+      - aws 
+  live: true
+  tools: 
+    python: 3.9
+    ansible: 2.14
+    awscli: 2.7 
+  tasks:
+  - name: print string
+  ansible.builtin.debug:
+    msg: "Name: {{NAME}}, Place: {{PLACE}}, topics: {{topics}}, live: {{live}}, tools: {{tools}}"
+
+    
