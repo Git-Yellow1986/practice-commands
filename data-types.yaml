@@ -5,7 +5,7 @@
     NAME: "Matthews"
     PLACE: "Hyderabd"
     AGE:  30
-    topics:
+  topics:
       - python
       - ansible
       - aws 
