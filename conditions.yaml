@@ -4,10 +4,15 @@
   vars_prompt:
   
   - name: NUMBER
-    prompt: "Enter your age"
-    private: no
+    prompt: "Enter number less than 0"
+    private: false
   tasks:
   - name: check the number less than 0
     ansible.builtin.debug:
-      msg: "the {{NUMBER}} cannot be less than 0"
-    when: NUMBER | int < 0
+      msg: "the {{NUMBER}} is less than 0"
+    when:  NUMBER | int < 0
+
+  - name: check the number less than 0
+    ansible.builtin.debug:
+      msg: "the {{NUMBER}} is greater than 0"
+    when:  NUMBER | int >= 0
