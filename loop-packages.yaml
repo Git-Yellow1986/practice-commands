@@ -11,7 +11,7 @@
         - nginx
         - mysql
       notify:
-        - restart nginx
+        - Start Nginx
 
   handlers:
     - name: Start Nginx
