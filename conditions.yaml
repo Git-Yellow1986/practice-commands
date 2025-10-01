@@ -1,5 +1,5 @@
 - name: conditions less than 0
-  hostss: local
+  hosts: local
   connection: local
   vars_prompt:
   - name: NUMBER
