@@ -1,5 +1,6 @@
 - name: conditions less than 0
   hosts: local
   connection: local
-  roles:
+  tasks:
+    roles:
     - myrole  
