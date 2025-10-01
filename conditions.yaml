@@ -1,0 +1,11 @@
+- name: conditions less than 0
+  hostss: local
+  connection: local
+  vars_prompt:
+  - name: NUMBER
+    prompt: "Enter your age"
+  tasks:
+  - name: check the number less than 0
+    ansible.builtin.debug:
+      msg: "Age cannot be less than 0"
+    when: NUMBER < 0
