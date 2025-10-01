@@ -2,8 +2,10 @@
   hosts: local
   connection: local
   vars_prompt:
+  
   - name: NUMBER
     prompt: "Enter your age"
+    private: no
   tasks:
   - name: check the number less than 0
     ansible.builtin.debug:
