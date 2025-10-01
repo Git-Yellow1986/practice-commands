@@ -2,9 +2,9 @@
   hosts: local
   #connection: local
   vars:
-    NAME = "Matthews"
-    PLACE = "Hyderabd"
-    AGE = 30
+    NAME: "Matthews"
+    PLACE: "Hyderabd"
+    AGE:  30
     topics:
       - python
       - ansible
