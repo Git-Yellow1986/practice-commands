@@ -10,11 +10,11 @@
         - { name: "nginx", state: "present" }
         - { name: "httpd", state: "absent" }  
         - { name: "mysql", state: "present" }   
-      notify: 
-        - Start Nginx
-  handlers:
-    - name: Start Nginx
-      ansible.builtin.service:
-        name: nginx
-        state: started
-        enabled: yes  
+  #     notify: 
+  #       - Start Nginx
+  # handlers:
+  #   - name: Start Nginx
+  #     ansible.builtin.service:
+  #       name: nginx
+  #       state: started
+  #       enabled: yes  
