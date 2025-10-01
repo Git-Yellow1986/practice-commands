@@ -1,6 +1,6 @@
 - name: all data types
   hosts: local
-  connection: local
+  #connection: local
   vars:
     NAME = "Matthews"
     PLACE = "Hyderabd"
