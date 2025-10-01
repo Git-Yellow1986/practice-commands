@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: check user exists or onot
-      ansible.builtin.command: id expense
+      ansible.builtin.user: id expense
       register: user_check
 
     # - name: check the user 
