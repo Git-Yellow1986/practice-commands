@@ -1,0 +1,6 @@
+- name: conditions less than 0
+  hosts: local
+  connection: local
+  roles:
+    - myrole  
+    
