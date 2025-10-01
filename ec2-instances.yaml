@@ -7,10 +7,10 @@
     subnet_id: "subnet-0bc41aa50c0fccefc"
     security_group: "sg-0b9fd6aabf64f5c40"
     ami_id: "ami-09c813fb71547fc4f"
-  instances:
-  - mysql
-  - backend
-  - frontend
+    instances:
+    - mysql
+    - backend
+    - frontend
 
   tasks:
     - name: Launch EC2 Instances
