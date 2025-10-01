@@ -25,4 +25,4 @@
 
   - name: Display instance information
     ansible.builtin.debug:
-      msg: "{{ec2_instance}}"
+      msg: "{{ ec2_instances }}"
