@@ -8,5 +8,5 @@
 
     - name: check the user 
       ansible.builtin.debug:
-        msg: "user info: {{ user_check}"
+        msg: "user info: {{ user_check }}"
       
