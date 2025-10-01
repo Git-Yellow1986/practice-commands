@@ -1,0 +1,21 @@
+- name: install packages
+  hosts: web
+  become: yes
+  tasks:
+    - name: Install multiple packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - httpd
+        - nginx
+        - mysql
+      notify:
+        - restart nginx
+
+  handlers:
+    - name: Start Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
