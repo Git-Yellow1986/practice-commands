@@ -16,7 +16,7 @@
     awscli: 2.7 
   tasks:
   - name: print string
-  ansible.builtin.debug:
-    msg: "Name: {{NAME}}, Place: {{PLACE}}, topics: {{topics}}, live: {{live}}, tools: {{tools}}"
+    ansible.builtin.debug:
+      msg: "Name: {{NAME}}, Place: {{PLACE}}, topics: {{topics}}, live: {{live}}, tools: {{tools}}"
 
     
