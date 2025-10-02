@@ -10,6 +10,7 @@
     - mysql
     - backend
     - frontend
+    zone: learnaws.space
 
   tasks:
   - name: Launch EC2 Instances
@@ -20,9 +21,35 @@
       security_group: "{{security_group}}"  
       vpc_subnet_id: "{{subnet_id}}"  
     loop: "{{ instances }}"
-    
     register: ec2_instances
 
-  - name: Display instance information
+  - name: Display instance information output
     ansible.builtin.debug:
-      msg: "{{ ec2_instances }}"
+      msg: "{{ ec2_instances}}"
+
+    # Private IPs R53
+  - name: Create R53 records for private IPs
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"  # mysql.learnaws.space
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwrite: true 
+    loop: "{{ ec2_instances.results }}"
+
+    # Public IP R53 for frontend only
+  - name: Create R53 records for private IPs
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"  # frontend.learnaws.space
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].public_ip_address }}"
+      wait: true
+      overwrite: true 
+    loop: "{{ ec2_instances.results }}"
+    when: item.item == 'frontend'
