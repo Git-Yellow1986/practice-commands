@@ -1,4 +1,0 @@
- vars_prompt:
-  - name: NUMBER
-    prompt: "Enter number less than 10"
-    private: false
